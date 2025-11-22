@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    background-color: #0a0a12;    /* Define a cor de fundo do corpo da página */
+    color: #e0e0e0;                   /* Define a cor do texto para branco */
+    font-family: 'Poppins', sans-serif; /* Usa a fonte Poppins, mais moderna */
+    margin: 0;                        /* Remove a margem padrão do corpo */
+    padding: 0;                       /* Remove o preenchimento padrão do corpo */
+    display: flex;                    /* Ativa o layout flexbox para o corpo */
+    flex-direction: column;           /* Organiza os filhos diretos (header, main, footer) em uma coluna */
+    min-height: 100vh;                /* Garante que o corpo ocupe pelo menos 100% da altura da tela */
+}
+
+header {
+    background: linear-gradient(to right, #1a1a2e, #1f1f3a); /* Adiciona um gradiente sutil */
+    padding: 20px;                    /* Adiciona preenchimento interno ao cabeçalho */
+    text-align: center;               /* Centraliza o texto dentro do cabeçalho */
+}
+
+header h1 {
+    margin: 0;                        /* Remove a margem do título principal */
+    font-size: 2.5em;                 /* Define o tamanho da fonte do título principal */
+}
+
+.search-container {
+    margin-top: 20px;                 /* Adiciona uma margem no topo do contêiner de busca */
+    display: flex;                    /* Ativa o layout flexbox para o contêiner de busca */
+    justify-content: center;          /* Centraliza os itens de busca horizontalmente */
+    gap: 10px;                        /* Adiciona um espaço de 10px entre os itens de busca */
+}
+
+.search-container input[type="text"] {
+    padding: 10px;                    /* Adiciona preenchimento interno ao campo de texto */
+    width: 300px;                     /* Define a largura do campo de texto */
+    border: none;                     /* Remove a borda do campo de texto */
+    border-radius: 5px;               /* Arredonda os cantos do campo de texto */
+    background-color: #1a1a2e;        /* Cor de fundo para combinar com o tema */
+    color: #e0e0e0;                   /* Cor do texto digitado */
+    border: 1px solid #333;           /* Borda sutil */
+}
+
+.search-container button {
+    padding: 10px 15px;               /* Adiciona preenchimento interno ao botão */
+    background-color: #0d6efd;        /* Um tom de azul mais vibrante */
+    color: #FFFFFF;                   /* Define a cor do texto do botão */
+    border: none;                     /* Remove a borda do botão */
+    border-radius: 5px;               /* Arredonda os cantos do botão */
+    cursor: pointer;                  /* Muda o cursor para uma mão ao passar sobre o botão */
+    font-weight: bold;                /* Deixa o texto do botão em negrito */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona transição suave */
+}
+
+.search-container button:hover {
+    background-color: #0056b3;        /* Escurece o botão ao passar o mouse */
+    transform: scale(1.05);           /* Aumenta levemente o tamanho do botão */
+}
+
+main {
+    flex-grow: 1;                     /* Faz com que o conteúdo principal ocupe o espaço restante */
+    padding: 20px;                    /* Adiciona preenchimento interno à seção principal */
+}
+
+.card-container {
+    display: flex;                    /* Ativa o layout flexbox para o contêiner dos cards */
+    flex-wrap: wrap;                  /* Permite que os cards quebrem para a próxima linha */
+    gap: 20px;                        /* Adiciona um espaço de 20px entre os cards */
+    justify-content: center;          /* Centraliza os cards horizontalmente */
+}
+
+.card {
+    background-color: #1a1a2e;    /* Define a cor de fundo do card */
+    border-radius: 8px;               /* Arredonda os cantos do card */
+    border: 1px solid transparent;    /* Borda inicial transparente */
+    padding: 20px;                    /* Adiciona preenchimento interno ao card */
+    width: 320px;                     /* Define uma largura base para o card */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* Sombra mais pronunciada */
+    display: flex;                    /* Ativa o layout flexbox para o conteúdo do card */
+    flex-direction: column;           /* Organiza o conteúdo do card em uma coluna */
+    text-align: left;                 /* Alinha o texto à esquerda dentro do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Transições suaves */
+}
+
+.card:hover {
+    transform: translateY(-10px);     /* Eleva o card ao passar o mouse */
+    box-shadow: 0 8px 24px rgba(13, 110, 253, 0.3); /* Sombra colorida no hover */
+    border-color: #0d6efd;            /* Cor da borda no hover */
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-title i {
+    font-size: 2.2em; /* Tamanho do ícone */
+    color: #e0e0e0;   /* Cor do ícone, para combinar com o texto */
+}
+
+.card h2 {
+    margin: 0;                        /* Remove margens do h2 para alinhar com o flex */
+    color: #007bff;                   /* Define a cor do título do card */
+    font-size: 1.5em;                 /* Ajusta o tamanho da fonte do título */
+}
+
+.card p {
+    flex-grow: 1;                     /* Faz a descrição ocupar o espaço disponível */
+}
+
+.card a {
+    background-color: #0d6efd;        /* Define a cor de fundo do link */
+    color: #FFFFFF;                   /* Define a cor do texto do link */
+    padding: 10px;                    /* Adiciona preenchimento interno ao link */
+    text-align: center;               /* Centraliza o texto do link */
+    text-decoration: none;            /* Remove o sublinhado do link */
+    border-radius: 5px;               /* Arredonda os cantos do link */
+    margin-top: 15px;                 /* Adiciona uma margem no topo do link */
+    font-weight: bold;                /* Deixa o texto do link em negrito */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.card a:hover {
+    background-color: #0056b3;        /* Escurece o link ao passar o mouse */
+}
+
+footer {
+    background-color: #1a1a2e;        /* Define a cor de fundo do rodapé */
+    padding: 15px;                    /* Adiciona preenchimento interno ao rodapé */
+    text-align: center;               /* Centraliza o texto dentro do rodapé */
+}
+
+footer ul {
+    list-style: none;                 /* Remove os marcadores da lista */
+    margin: 0;                        /* Remove a margem da lista */
+    padding: 0;                       /* Remove o preenchimento da lista */
+}
+
+footer li {
+    display: inline-block;            /* Permite que o item da lista se comporte como um bloco em linha */
+}
+
+footer a {
+    color: #a0a0a0;                   /* Cor cinza clara para o link */
+    text-decoration: none;            /* Remove o sublinhado padrão */
+    font-weight: bold;                /* Texto em negrito */
+    padding: 8px 15px;                /* Adiciona preenchimento para criar um fundo maior */
+    border-radius: 5px;               /* Arredonda os cantos */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+footer a:hover {
+    color: #FFFFFF;                   /* Cor do texto branca ao passar o mouse */
+    background-color: #0d6efd;        /* Fundo azul (consistente com o site) no hover */
+    transform: translateY(-3px);      /* Eleva o link sutilmente */
+}
